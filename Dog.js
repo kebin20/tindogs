@@ -3,6 +3,7 @@ class Dog {
     Object.assign(this, data);
   }
 
+
   getDogHtml() {
     const { name, avatar, age, bio } = this;
     return ` 
