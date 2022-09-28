@@ -1,0 +1,11 @@
+#like-badge {
+    position: absolute;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display:  none;
+}

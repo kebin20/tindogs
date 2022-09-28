@@ -1,19 +1,57 @@
 import dogs from "./data.js";
 import Dog from "./Dog.js";
 
+//Global Variables
+let hasBeenSwiped = false;
+let hasBeenLiked = false;
+let dogArray = [0, 1, 2];
+
 // HTML Components
-document.getElementById("like-button").addEventListener("click", () => {
-  renderLike();
-  // render();
-});
-document.getElementById("nope-button").addEventListener("click", () => {
-  renderNope();
-  // render();
-});
+document.getElementById("like-button").addEventListener("click", swipedLike);
+document.getElementById("nope-button").addEventListener("click", swipedNope);
 
 function getNewDog() {
-  const nextDogData = dogs.shift();
-  return nextDogData ? new Dog(nextDogData) : {};
+  const nextDogData = dogs[dogArray.shift()];
+  // dogs[dogArray.shift()];
+  return nextDogData ? new Dog(nextDogData) : [];
+}
+
+function swipedLike() {
+  if (!hasBeenLiked) {
+    hasBeenLiked = true;
+    renderDog();
+    if (dogArray.length > 0) {
+      currentDog = getNewDog();
+      renderDog();
+      hasBeenLiked = false;
+    } else if (dogArray.length === 0) {
+      endOfMatches();
+    }
+  }
+}
+
+function swipedNope() {
+  if (!hasBeenSwiped) {
+    hasBeenSwiped = true;
+    renderDog();
+
+    if (dogArray.length > 0) {
+      currentDog = getNewDog();
+      renderDog();
+      hasBeenSwiped = false;
+    } else if (dogArray.length === 0) {
+      endOfMatches();
+    }
+  }
+}
+
+function endOfMatches() {
+  document.body.innerHTML = `
+        <div class="end-of-matches">
+            <h2>You have no more matches!</h2> 
+            <p class="end-emoji">emoji</p>
+        </div>
+        `;
 }
 
 function renderLike() {
@@ -22,17 +60,9 @@ function renderLike() {
   ${currentDog.getDogHtml()}`;
 }
 
-function renderNope() {
-  document.getElementById(
-    "profile"
-  ).innerHTML = `<image src="images/badge-nope.png"></image>
-  ${currentDog.getDogHtml()}`;
-}
-
-function render() {
+function renderDog() {
   document.getElementById("profile").innerHTML = currentDog.getDogHtml();
-  // document.getElementById("profile").innerHTML = bella.getDogHtml();
 }
 
 let currentDog = getNewDog();
-render();
+renderDog();
