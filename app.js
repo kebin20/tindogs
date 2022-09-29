@@ -12,7 +12,6 @@ document.getElementById("nope-button").addEventListener("click", swipedNope);
 
 function getNewDog() {
   const nextDogData = dogs[dogArray.shift()];
-  // dogs[dogArray.shift()];
   return nextDogData ? new Dog(nextDogData) : [];
 }
 
@@ -20,6 +19,7 @@ function swipedLike() {
   if (!hasBeenLiked) {
     hasBeenLiked = true;
     renderDog();
+    renderLikeIcon();
     if (dogArray.length > 0) {
       currentDog = getNewDog();
       renderDog();
@@ -34,7 +34,7 @@ function swipedNope() {
   if (!hasBeenSwiped) {
     hasBeenSwiped = true;
     renderDog();
-
+    renderNopeIcon();
     if (dogArray.length > 0) {
       currentDog = getNewDog();
       renderDog();
@@ -54,10 +54,12 @@ function endOfMatches() {
         `;
 }
 
-function renderLike() {
-  document.getElementById("profile").innerHTML = `
-  <image src="images/badge-like.png"></image>
-  ${currentDog.getDogHtml()}`;
+function renderLikeIcon() {
+  document.getElementById("like-icon").style.display = "block";
+}
+
+function renderNopeIcon() {
+  document.getElementById("nope-icon").style.display = "block";
 }
 
 function renderDog() {

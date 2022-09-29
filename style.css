@@ -1,14 +1,15 @@
-#like-badge, #nope-badge {
+#like-icon, #nope-icon {
     position: absolute;
+    display: none;
 }
 
-.visible {
+/* .visible {
     display: block;
 }
 
 .hidden {
     display:  none;
-}
+} */
 
 /* modal */
   
@@ -33,11 +34,7 @@
     margin: 0 auto;
 }
 
-/* .modal-inner-loading{
-    text-align: center;
-} */
-
-/* modal buttons */
+/* modal button */
 
 .close-modal-btn-container{
     text-align: right;
@@ -57,9 +54,3 @@
     color: red;
     cursor: pointer;
 }
-
-/* .modal-close-btn:disabled{
-    color: whitesmoke;
-    opacity: 0.2;
-    cursor: not-allowed;
-} */
