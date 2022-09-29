@@ -21,7 +21,7 @@ function swipedLike() {
     renderDog();
     setTimeout(() => {
       renderLikeIcon();
-    }, 1500);
+    }, 500);
     if (dogArray.length > 0) {
       currentDog = getNewDog();
       renderDog();
@@ -38,7 +38,7 @@ function swipedNope() {
     renderDog();
     setTimeout(() => {
       renderNopeIcon();
-    }, 1500);
+    }, 500);
     if (dogArray.length > 0) {
       currentDog = getNewDog();
       renderDog();
