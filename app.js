@@ -19,7 +19,9 @@ function swipedLike() {
   if (!hasBeenLiked) {
     hasBeenLiked = true;
     renderDog();
-    renderLikeIcon();
+    setTimeout(() => {
+      renderLikeIcon();
+    }, 1500);
     if (dogArray.length > 0) {
       currentDog = getNewDog();
       renderDog();
@@ -34,7 +36,9 @@ function swipedNope() {
   if (!hasBeenSwiped) {
     hasBeenSwiped = true;
     renderDog();
-    renderNopeIcon();
+    setTimeout(() => {
+      renderNopeIcon();
+    }, 1500);
     if (dogArray.length > 0) {
       currentDog = getNewDog();
       renderDog();
