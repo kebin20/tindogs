@@ -66,3 +66,13 @@ function renderDog() {
 
 let currentDog = getNewDog();
 renderDog();
+
+//Modal Function
+const modal = document.getElementById("modal");
+const closeButton = document.getElementById("modal-close-btn");
+
+setTimeout(() => {
+  modal.style.display = "inline";
+}, 1500);
+
+closeButton.addEventListener("click", () => (modal.style.display = "none"));
