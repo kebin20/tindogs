@@ -7,7 +7,7 @@ class Dog {
     const { name, avatar, age, bio } = this;
     return ` 
         <img src="${avatar}" class="avatar"></img>
-        <div class="profile">
+        <div class="profile-text">
         <h4 class="name-age">${name}, ${age}</h4>
         <p class="bio">${bio}</p>
       </div>
