@@ -1,15 +1,75 @@
+body {
+ margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =================
+Layout
+================= */
+
+.button-row>button {
+    padding: 2em;
+    margin: 1em;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-container {
+    display: flex; 
+    justify-content: space-between;
+    max-width: 100%;
+    width: 1070px;
+    margin-bottom: 1.5em;
+}
+
 #like-icon, #nope-icon {
     position: absolute;
     display: none;
+    transform: translate(19%, 59%) rotate(-22deg);
+    width: 35%;
 }
 
-/* .visible {
-    display: block;
+.profile{
+ position: absolute;
+ top: 80vh;
+ margin-left: 1em;
+ font-size: 3rem;
+ color: white;
 }
 
-.hidden {
-    display:  none;
-} */
+
+
+@media (max-width: 500px) {
+    .profile{
+        top: 60vh;
+        font-size: 1.2rem;
+       }
+
+    .paw-logo {
+        width: 50%;
+    }
+
+    .nav-container>button {
+        width: 60%;
+    }
+
+    #like-icon, #nope-icon {
+        width: 75%;
+    }
+}
 
 /* modal */
   

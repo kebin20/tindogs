@@ -6,9 +6,12 @@ class Dog {
   getDogHtml() {
     const { name, avatar, age, bio } = this;
     return ` 
-        <image src="${avatar}"></image>
+        <img src="${avatar}" class="avatar"></img>
+        <div class="profile">
         <h4 class="name-age">${name}, ${age}</h4>
-        <p class="bio">${bio}</p>`;
+        <p class="bio">${bio}</p>
+      </div>
+        `;
   }
 }
 
