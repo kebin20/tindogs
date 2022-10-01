@@ -18,34 +18,34 @@ function getNewDog() {
 function swipedLike() {
   if (!hasBeenLiked) {
     hasBeenLiked = true;
-    renderDog();
+    renderLikeIcon();
     setTimeout(() => {
-      renderLikeIcon();
-    }, 500);
-    if (dogArray.length > 0) {
-      currentDog = getNewDog();
-      renderDog();
-      hasBeenLiked = false;
-    } else if (dogArray.length === 0) {
-      endOfMatches();
-    }
+      if (dogArray.length > 0) {
+        currentDog = getNewDog();
+        renderDog();
+        hasBeenLiked = false;
+        document.getElementById("like-icon").style.display = "none";
+      } else if (dogArray.length === 0) {
+        endOfMatches();
+      }
+    }, 1500);
   }
 }
 
 function swipedNope() {
   if (!hasBeenSwiped) {
     hasBeenSwiped = true;
-    renderDog();
+    renderNopeIcon();
     setTimeout(() => {
-      renderNopeIcon();
-    }, 500);
-    if (dogArray.length > 0) {
-      currentDog = getNewDog();
-      renderDog();
-      hasBeenSwiped = false;
-    } else if (dogArray.length === 0) {
-      endOfMatches();
-    }
+      if (dogArray.length > 0) {
+        currentDog = getNewDog();
+        renderDog();
+        hasBeenSwiped = false;
+        document.getElementById("nope-icon").style.display = "none";
+      } else if (dogArray.length === 0) {
+        endOfMatches();
+      }
+    }, 1500);
   }
 }
 
