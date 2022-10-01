@@ -18,7 +18,7 @@ function getNewDog() {
 function swipedLike() {
   if (!hasBeenLiked) {
     hasBeenLiked = true;
-    renderLikeIcon();
+    document.getElementById("like-icon").style.display = "block";
     setTimeout(() => {
       if (dogArray.length > 0) {
         currentDog = getNewDog();
@@ -28,14 +28,14 @@ function swipedLike() {
       } else if (dogArray.length === 0) {
         endOfMatches();
       }
-    }, 1500);
+    }, 1000);
   }
 }
 
 function swipedNope() {
   if (!hasBeenSwiped) {
     hasBeenSwiped = true;
-    renderNopeIcon();
+    document.getElementById("nope-icon").style.display = "block";
     setTimeout(() => {
       if (dogArray.length > 0) {
         currentDog = getNewDog();
@@ -45,7 +45,7 @@ function swipedNope() {
       } else if (dogArray.length === 0) {
         endOfMatches();
       }
-    }, 1500);
+    }, 1000);
   }
 }
 
@@ -53,17 +53,9 @@ function endOfMatches() {
   document.body.innerHTML = `
         <div class="end-of-matches">
             <h2>You have no more matches!</h2> 
-            <p class="end-emoji">emoji</p>
+            <img class="end-emoji">emoji</img>
         </div>
         `;
-}
-
-function renderLikeIcon() {
-  document.getElementById("like-icon").style.display = "block";
-}
-
-function renderNopeIcon() {
-  document.getElementById("nope-icon").style.display = "block";
 }
 
 function renderDog() {
@@ -72,6 +64,8 @@ function renderDog() {
 
 let currentDog = getNewDog();
 renderDog();
+
+
 
 //Modal Function
 const modal = document.getElementById("modal");
