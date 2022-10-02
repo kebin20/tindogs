@@ -7,7 +7,9 @@ img {
     border-radius: 20px;;
 }
 
-
+h4 {
+    font-weight: 900;
+}
 
 /* =================
 Layout
@@ -86,10 +88,10 @@ Button styling
 
 .profile-text{
     position: absolute;
-    top: 97vh;
+    margin: 25em;
     font-size: 2rem;
     color: white;
-    width: 38%;
+    width: 39%;
 }
 
 /* =================
@@ -256,13 +258,13 @@ Modal
     left: 0;
     max-width: 90%;
     margin: auto;
-    height: 800px;
+    height: 400px;
     width: 350px;
     border-radius: 7px;
     box-shadow: 0px 0px 6px 2px #666;
     background-color: #212529;
     color: whitesmoke;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .modal-inner{
