@@ -59,11 +59,12 @@ function endOfMatches() {
   <div class="end-of-matches">
         <nav class="nav-container">
             <button><img src="images/icon-profile.png" alt=""></button>
-            <img src="images/logo.png" class="paw-logo" alt="">
+            <button class="refresh-button" onClick="window.location.reload();"><img src="images/logo.png"
+                    class="paw-logo" alt=""></button>
             <button><img src="images/icon-chat.png" alt=""></button>
         </nav>
         <div class="text-container">
-            <h2>You have no more matches! Please refresh the page to go back to your original matches.</h2> 
+            <h2>You have no more matches! Click the paw button to refresh the page to go back to your original matches.</h2> 
             <img src="images/dog-sad.jpg" class="end-emoji"></img>
             </div>
         </div>

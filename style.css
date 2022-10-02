@@ -11,6 +11,7 @@ h4 {
     font-weight: 900;
 }
 
+
 /* =================
 Layout
 ================= */
@@ -34,10 +35,22 @@ Layout
     justify-content: center;
    }
 
+   .profile-text{
+    position: absolute;
+    margin: 25em;
+    font-size: 2rem;
+    color: white;
+    width: 39%;
+}
 
 /* =================
 Button styling
 ================= */
+
+.button-row {
+    display: flex;
+    justify-content: space-evenly;
+}
 
  button {
     background-color: white;
@@ -80,25 +93,11 @@ Button styling
     color: #666666;
   }
 
-
-.button-row {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 #like-icon, #nope-icon {
     position: absolute;
     display: none;
     transform:  translate(55%, 60%) rotate(-22deg);
     width: 25%;
-}
-
-.profile-text{
-    position: absolute;
-    margin: 25em;
-    font-size: 2rem;
-    color: white;
-    width: 39%;
 }
 
 /* =================
@@ -229,7 +228,7 @@ Media queries
 }
 
 /* =================
-End of Matches Style
+End of Matches Screen Style
 ================= */
 .end-of-matches {
     display: flex;
