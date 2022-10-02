@@ -27,14 +27,10 @@ Layout
     margin-bottom: 1.5em;
 }
 
-
-
 #profile {
     display: flex;
     justify-content: center;
    }
-
-
 
  button {
     background-color: white;
@@ -70,15 +66,15 @@ Layout
     position: absolute;
     display: none;
     transform:  translate(40%, 60%) rotate(-22deg);
-    width: 20%;
+    width: 15%;
 }
 
 .profile-text{
     position: absolute;
-    top: 72vh;
+    top: 50vh;
     font-size: 2rem;
     color: white;
-    width: 27%;
+    width: 20%;
 }
 
 /* =================
@@ -91,7 +87,7 @@ Media queries
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .profile-text{
-        top: 75vh;
+        top: 70vh;
         left: 12vh;
         font-size: 1.8rem;
         width: 70%;
@@ -114,6 +110,12 @@ Media queries
         width: 43%;
     }
 
+    .modal{
+        overflow-y: scroll;
+        max-height: 70%;
+        word-wrap: normal;
+        font-size: 1.5rem;
+    }
 }
 
 /* For newer mobile screens */
@@ -143,7 +145,22 @@ Media queries
         width: 75%;
         transform: translate(11%, 80%) rotate(-22deg);
     }
+
+    .modal{
+        overflow-y: scroll;
+        max-height: 70%;
+        word-wrap: normal;
+        font-size: 1.5rem;
+    }
+
+    text-container>h2 {
+        width: 70%;
+        line-height: 2.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+    }
 }
+
 
 /* For smaller phone screens */
 @media only screen 
@@ -177,10 +194,39 @@ Media queries
         word-wrap: normal;
         font-size: 1.5rem;
     }
+
+    text-container>h2 {
+        width: 70%;
+        line-height: 2.5rem;
+        text-align: center;
+        /* padding: 0.3em; */
+        font-size: 1.1rem;
+    }
 }
 
+/* =================
+End of Matches Style
+================= */
+.end-of-matches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
 
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
 
+text-container>h2 {
+    width: 35%;
+    line-height: 2.5rem;
+    text-align: center;
+    padding: 1.3em;
+}
 
 /* =================
 Modal
@@ -190,7 +236,7 @@ Modal
     display: block;
     position: fixed;
     top: 0;
-    bottom: 0;
+    bottom: 15vh;
     right: 0;
     left: 0;
     max-width: 90%;
@@ -217,7 +263,7 @@ Modal
 }
 
 .modal-close-btn {
-  font-size: 22px;
+  font-size: 40px;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid transparent;

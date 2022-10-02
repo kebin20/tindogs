@@ -4,7 +4,7 @@ import Dog from "./Dog.js";
 //Global Variables
 let hasBeenSwiped = false;
 let hasBeenLiked = false;
-let dogArray = [0, 1, 2];
+let dogArray = [0, 1, 2, 3, 4, 5, 6];
 
 // HTML Components
 document.getElementById("like-button").addEventListener("click", swipedLike);
@@ -51,9 +51,17 @@ function swipedNope() {
 
 function endOfMatches() {
   document.body.innerHTML = `
-        <div class="end-of-matches">
-            <h2>You have no more matches!</h2> 
-            <img class="end-emoji">emoji</img>
+      
+  <div class="end-of-matches">
+        <nav class="nav-container">
+            <button><img src="images/icon-profile.png" alt=""></button>
+            <img src="images/logo.png" class="paw-logo" alt="">
+            <button><img src="images/icon-chat.png" alt=""></button>
+        </nav>
+        <div class="text-container">
+            <h2>You have no more matches! Please refresh the page to go back to your original matches.</h2> 
+            <img src="images/dog-sad.jpg" class="end-emoji"></img>
+            </div>
         </div>
         `;
 }
@@ -64,8 +72,6 @@ function renderDog() {
 
 let currentDog = getNewDog();
 renderDog();
-
-
 
 //Modal Function
 const modal = document.getElementById("modal");
