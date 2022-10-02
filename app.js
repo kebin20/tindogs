@@ -19,12 +19,14 @@ function swipedLike() {
   if (!hasBeenLiked) {
     hasBeenLiked = true;
     document.getElementById("like-icon").style.display = "block";
+    document.getElementById("nope-button").disabled = true;
     setTimeout(() => {
       if (dogArray.length > 0) {
         currentDog = getNewDog();
         renderDog();
         hasBeenLiked = false;
         document.getElementById("like-icon").style.display = "none";
+        document.getElementById("nope-button").disabled = false;
       } else if (dogArray.length === 0) {
         endOfMatches();
       }
@@ -36,12 +38,14 @@ function swipedNope() {
   if (!hasBeenSwiped) {
     hasBeenSwiped = true;
     document.getElementById("nope-icon").style.display = "block";
+    document.getElementById("like-button").disabled = true;
     setTimeout(() => {
       if (dogArray.length > 0) {
         currentDog = getNewDog();
         renderDog();
         hasBeenSwiped = false;
         document.getElementById("nope-icon").style.display = "none";
+        document.getElementById("like-button").disabled = false;
       } else if (dogArray.length === 0) {
         endOfMatches();
       }
@@ -76,9 +80,5 @@ renderDog();
 //Modal Function
 const modal = document.getElementById("modal");
 const closeButton = document.getElementById("modal-close-btn");
-
-setTimeout(() => {
-  modal.style.display = "inline";
-}, 1500);
 
 closeButton.addEventListener("click", () => (modal.style.display = "none"));

@@ -74,6 +74,13 @@ Button styling
     transform: translateY(4px);
   }
 
+  #like-button:disabled,#nope-button:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+
+
 .button-row {
     display: flex;
     justify-content: space-evenly;
@@ -82,8 +89,8 @@ Button styling
 #like-icon, #nope-icon {
     position: absolute;
     display: none;
-    transform:  translate(40%, 60%) rotate(-22deg);
-    width: 15%;
+    transform:  translate(55%, 60%) rotate(-22deg);
+    width: 25%;
 }
 
 .profile-text{
