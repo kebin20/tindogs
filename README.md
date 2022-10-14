@@ -1,5 +1,5 @@
 # tindogs
-A small dating app exclusively for dogs (cats version will come soon)
+A small dating app exclusively for dogs 
 
 
 Reflection and notes:
@@ -14,3 +14,9 @@ Challenges:
 
 - Struggled to find a way to show the next dog after clicking the like or nope button (Solved!)
 - Had problems managing to have the like badge show while the current dog match remain in place. (solved!)
+
+
+Improvements needed to be made:
+
+- Use of a hardcoded dogArray variable. 
+To fix, replace dogArray with an index variable starting at 0, and increment the index as you go through the list of dogs.  
