@@ -1,10 +1,10 @@
 import dogs from "./data.js";
 import Dog from "./Dog.js";
 
-//Global Variables
+// Global Variables
 let hasBeenSwiped = false;
 let hasBeenLiked = false;
-let dogArray = [0, 1, 2, 3, 4, 5, 6];
+const dogArray = [0, 1, 2, 3, 4, 5, 6];
 
 // HTML Components
 document.getElementById("like-button").addEventListener("click", swipedLike);
@@ -78,7 +78,7 @@ function renderDog() {
 let currentDog = getNewDog();
 renderDog();
 
-//Modal Function
+// Modal Function
 const modal = document.getElementById("modal");
 const closeButton = document.getElementById("modal-close-btn");
 
